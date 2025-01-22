@@ -11,7 +11,7 @@ from flask import Flask, request
 
 
 app = Flask(__name__)
-TOKEN = '<YOUR BOT API TOKEN>'
+TOKEN = '7822979438:AAF53-I5fdea2FvkoZ0zWFJnDfINPclUROY'
 bot = telegram.Bot(token=TOKEN)
 
 
@@ -22,7 +22,7 @@ def index():
 
 @app.route('/setwebhook', methods=['GET', 'POST'])
 def set_webhook():
-    s = bot.setWebhook('https://<YOUR HEROKU APP NAME>.herokuapp.com/{HOOK}'.format(HOOK=TOKEN))
+    s = bot.setWebhook('https://bot-stock.onrender.com/{HOOK}'.format(HOOK=TOKEN))
     if s:
         return "webhook setup ok"
     else:
