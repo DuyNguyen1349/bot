@@ -6,7 +6,7 @@ import yahoo_fin.stock_info as si
 import pandas
 
 
-TOKEN = '<YOUR BOT API'
+TOKEN = '7822979438:AAF53-I5fdea2FvkoZ0zWFJnDfINPclUROY'
 bot = telegram.Bot(token=TOKEN)
 
 app = Flask(__name__)
@@ -19,7 +19,7 @@ def index():
 
 @app.route('/setwebhook', methods=['GET', 'POST'])
 def set_webhook():
-    s = bot.setWebhook('https://<YOUR APP NAME>.herokuapp.com/{HOOK}'.format(HOOK=TOKEN))
+    s = bot.setWebhook('https://bot-stock.onrender.com/{HOOK}'.format(HOOK=TOKEN))
     if s:
         return "webhook setup ok"
     else:
